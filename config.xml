@@ -8,14 +8,9 @@
   </installState>
   <numExecutors>2</numExecutors>
   <mode>NORMAL</mode>
-  <useSecurity>false</useSecurity>
-  <authorizationStrategy class="hudson.security.FullControlOnceLoggedInAuthorizationStrategy">
-    <denyAnonymousReadAccess>true</denyAnonymousReadAccess>
-  </authorizationStrategy>
-  <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
-    <disableSignup>true</disableSignup>
-    <enableCaptcha>false</enableCaptcha>
-  </securityRealm>
+  <useSecurity>true</useSecurity>
+  <authorizationStrategy class="hudson.security.AuthorizationStrategy$Unsecured"/>
+  <securityRealm class="hudson.security.SecurityRealm$None"/>
   <disableRememberMe>false</disableRememberMe>
   <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
   <workspaceDir>${JENKINS_HOME}/workspace/${ITEM_FULLNAME}</workspaceDir>
